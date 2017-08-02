@@ -9,8 +9,8 @@ module.exports = function(sequelize, DataTypes) {
 
   User.associate = function(models){
     // userId is just a name for the foreignKey to keep it unique
-    User.hasMany(models.Gab, {as: 'gabs', foreignKey: 'userId', onDelete: 'cascade', hooks: true });
-    
+    User.hasMany(models.Gab, {as: 'gabs', foreignKey: 'user_id', onDelete: 'cascade', hooks: true });
+
   };
   return User;
 };

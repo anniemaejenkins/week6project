@@ -9,6 +9,9 @@ const parseurl = require('parseurl');
 
 module.exports = {
    renderGab: function(req, res){
+     models.Gab.findAll({}).then(results=>{
+       console.log("results",results);
+     });
     res.render('Gab', {});
 }
 };

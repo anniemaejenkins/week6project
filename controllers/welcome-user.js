@@ -43,9 +43,9 @@ module.exports = {
       //set the property = to the username they are providing as long as it validates
       req.session.username = user.username;
       req.session.userId = user.id;
-      console.log(req.session.username);
+      // console.log(req.session.username);
 
-      res.redirect('/');
+      res.redirect('/gab');
     });
 
   }
