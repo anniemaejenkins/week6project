@@ -9,6 +9,6 @@ const parseurl = require('parseurl');
 
 module.exports = {
    renderGab: function(req, res){
-    res.render('gab', {});
+    res.render('Gab', {});
 }
 };

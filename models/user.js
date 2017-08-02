@@ -5,12 +5,12 @@ module.exports = function(sequelize, DataTypes) {
     password: DataTypes.STRING,
     first_name: DataTypes.STRING,
     last_name: DataTypes.STRING
-  }, {
-    classMethods: {
-      associate: function(models) {
-        // associations can be defined here
-      }
-    }
-  });
+  }, {});
+
+  User.associate = function(models){
+    // userId is just a name for the foreignKey to keep it unique
+    User.hasMany(models.Gab, {as: 'gabs', foreignKey: 'userId', onDelete: 'cascade', hooks: true });
+    
+  };
   return User;
 };
