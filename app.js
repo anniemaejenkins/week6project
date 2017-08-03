@@ -68,6 +68,12 @@ app.post('/signup', welcomeController.signupWelcome);
 
 app.post('/signin', welcomeController.signinWelcome);
 
+app.post('/gab', gabController.createGab);
+
+app.post('/delete/:id', gabController.deleteGab);
+
+app.post('/logout', gabController.logOut);
+
 
 
 

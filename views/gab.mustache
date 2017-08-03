@@ -6,5 +6,22 @@
   </head>
   <body>
 
+    {{#models}}
+    {{message}}
+    {{id}}
+    <form class="" action="/delete/{{id}}" method="post">
+      <input type="submit" name="" value="delete">
+    </form>
+    {{/models}}
+    <form class="" action="/gab" method="post">
+      <!-- parser graps from the name ie req.body.gab -->
+      <input type="text" name="gab" value="">
+      <input type="submit" name="" value="submit">
+    </form>
+    <!-- create a delete session button -->
+    <form class="" action="/logout" method="post">
+      <input type="submit" name="" value="log out">
+    </form>
+
   </body>
 </html>
