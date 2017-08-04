@@ -10,8 +10,13 @@ const parseurl = require('parseurl');
 module.exports = {
    renderGab: function(req, res){
      let context = {}
-     models.Gab.findAll({}).then(results=>{
-       console.log("results",results);
+     models.Gab.findAll({
+       include: [{
+         model: models.like,
+         as: 'likes'
+       }]
+     }).then(results=>{
+      //  console.log("results",results);
       context.models = results
 
        res.render('Gab', context);

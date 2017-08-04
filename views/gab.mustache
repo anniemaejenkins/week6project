@@ -16,7 +16,14 @@
     <form class="" action="/delete/{{id}}" method="post">
       <input type="submit" name="" value="delete">
     </form>
+
+    {{likes.length}}
+    <br>
+    <form class="" action="/detail" method="post">
+      <input type="submit" name="" value="see who liked">
+    </form>
     {{/models}}
+      <h3>Create a gab!</h3>
     <form class="" action="/gab" method="post">
       <!-- parser graps from the name ie req.body.gab -->
       <input type="text" name="gab" value="">
@@ -26,6 +33,8 @@
     <form class="" action="/logout" method="post">
       <input type="submit" name="" value="log out">
     </form>
+
+
 
   </body>
 </html>

@@ -7,11 +7,20 @@ const session = require('express-session');
 const models = require('../models');
 const parseurl = require('parseurl');
 
+
 module.exports = {
-  createLike: function(req, res){
-    models.like.create({user_id: req.session.userId, gab_id: req.params.id}).then(results =>{
-      // console.log("like", results);
-      res.redirect('/gab');
+  renderDetails: function(req, res){
+    let context = {}
+    models.Gab.findOne({
+      include: [{
+        model: models.like,
+        as: 'likes'
+      }]
+    }).then(results=>{
+      // console.log("results",results);
+     context.models = results
+
+      res.render('detail', context);
     });
-  }
+}
 };

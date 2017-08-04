@@ -12,6 +12,7 @@ const welcomeController = require('./controllers/welcome-user.js');
 const gabController = require('./controllers/gabs-user.js');
 const indexController = require('./controllers/index-user.js');
 const likesController = require('./controllers/likes-user.js');
+const detailController = require('./controllers/detail-gabs.js');
 
 const app = express();
 
@@ -61,6 +62,8 @@ app.get('/like', backToLogin, function(req, res){
   res.render('likes', {});
 });
 
+// app.get('/detail', detailController.renderDetails);
+
 //app.posts
 
 //naming it signupWelcome to keep track of what it's doing and its location
@@ -76,6 +79,7 @@ app.post('/logout', gabController.logOut);
 
 app.post('/gab/:id', likesController.createLike);
 
+app.post('/detail', detailController.renderDetails);
 
 
 
