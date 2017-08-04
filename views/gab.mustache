@@ -9,6 +9,10 @@
     {{#models}}
     {{message}}
     {{id}}
+    <form class="" action="/gab/{{id}}" method="post">
+      <input type="submit" name="" value="like">
+    </form>
+
     <form class="" action="/delete/{{id}}" method="post">
       <input type="submit" name="" value="delete">
     </form>

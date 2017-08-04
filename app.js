@@ -57,7 +57,7 @@ app.get('/welcome', welcomeController.renderWelcome);
 
 app.get('/gab', backToLogin, gabController.renderGab);
 
-app.get('/likes', backToLogin, function(req, res){
+app.get('/like', backToLogin, function(req, res){
   res.render('likes', {});
 });
 
@@ -73,6 +73,8 @@ app.post('/gab', gabController.createGab);
 app.post('/delete/:id', gabController.deleteGab);
 
 app.post('/logout', gabController.logOut);
+
+app.post('/like', likesController.createLike);
 
 
 
