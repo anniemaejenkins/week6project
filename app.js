@@ -79,7 +79,7 @@ app.post('/logout', gabController.logOut);
 
 app.post('/gab/:id', likesController.createLike);
 
-app.post('/detail', detailController.renderDetails);
+app.post('/detail/:id', detailController.renderDetails);
 
 
 

@@ -12,14 +12,14 @@
     <form class="" action="/gab/{{id}}" method="post">
       <input type="submit" name="" value="like">
     </form>
-
+    <p>Delete your gab?</p>
     <form class="" action="/delete/{{id}}" method="post">
       <input type="submit" name="" value="delete">
     </form>
 
-    {{likes.length}}
+    <p>{{likes.length}}likes</p>
     <br>
-    <form class="" action="/detail" method="post">
+    <form class="" action="/detail/{{id}}" method="post">
       <input type="submit" name="" value="see who liked">
     </form>
     {{/models}}
