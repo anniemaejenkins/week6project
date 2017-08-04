@@ -22,7 +22,7 @@ module.exports = {
   // in mongoose the row is called a document, in the table it's called a collection
     createGab: function(req, res){
       models.Gab.create({message: req.body.gab, user_id: req.session.userId}).then(results =>{
-        console.log("stuff", results);
+        // console.log("stuff", results);
         res.redirect("/gab");
       });
     },

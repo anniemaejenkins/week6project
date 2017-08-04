@@ -74,7 +74,7 @@ app.post('/delete/:id', gabController.deleteGab);
 
 app.post('/logout', gabController.logOut);
 
-app.post('/like', likesController.createLike);
+app.post('/gab/:id', likesController.createLike);
 
 
 
